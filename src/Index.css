@@ -1,15 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
-:root {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #fdfdfd;
-  color: #333;
+  background-color: #0b0b0c;
+  color: #eee;
+  line-height: 1.6;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
 }
 
 a {
@@ -17,8 +29,28 @@ a {
   color: inherit;
 }
 
-button {
+button,
+input,
+select,
+textarea {
   font-family: inherit;
   cursor: pointer;
 }
 
+/* Accessible skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+}
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+  background: #ffffff;
+  color: #000000;
+  padding: 8px 12px;
+  border-radius: 6px;
+  z-index: 2000;
+  text-decoration: none;
+  outline: 2px solid #000;
+}

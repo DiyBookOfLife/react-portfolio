@@ -1,9 +1,9 @@
-import React from 'react';
-import './Contact.css';
+import React from "react";
+import "./Contact.css";
 
 function Contact() {
   return (
-    <div className="contactPage">
+    <main id="main" className="main-body">
       <div className="contactContent">
         <blockquote id="quote">
           "I can do all things through <b>Christ</b> who strengthens me"
@@ -11,26 +11,36 @@ function Contact() {
         </blockquote>
 
         <div className="contactContainer">
-          <a href="mailto:tsthomas205@gmail.com">
-            <button className="headerBox">Email</button>
+          <a
+            href="mailto:tsthomas205@gmail.com"
+            aria-label="Send me an email"
+            className="headerBox"
+          >
+            Email
           </a>
+
           <a
             href="https://www.linkedin.com/in/tonithomas2025/"
             target="_blank"
             rel="noreferrer"
+            aria-label="Visit my LinkedIn profile"
+            className="contentBox"
           >
-            <button className="contentBox">LinkedIn</button>
+            LinkedIn
           </a>
+
           <a
             href="https://github.com/DiyBookOfLife"
             target="_blank"
             rel="noreferrer"
+            aria-label="View my GitHub projects"
+            className="footerBox"
           >
-            <button className="footerBox">GitHub</button>
+            GitHub
           </a>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 

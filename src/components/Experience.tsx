@@ -1,62 +1,77 @@
-import React from 'react';
-import './Experience.css';
+import React from "react";
+import "./Experience.css";
 
 function Experience() {
   return (
-    <div className="mainBody">
-      <div className="experienceContainer">
-        <div className="experienceHeader">
-          <h2>Work Experience</h2>
-        </div>
+    <main className="experiencePage">
+      <div className="experienceContent">
+        <h2>Work Experience</h2>
 
-        <aside className="experienceSidebar">
-          <blockquote cite="https://www.forbes.com/quotes/theme/experience/">
-            <p className="quotation">
-              "The story of any one man's real experience finds its startling
-              parallel in that of everyone of us."
-            </p>
-            <p>-James Russell Lowell</p>
-          </blockquote>
-        </aside>
+        {/* Advanced Technical Support Specialist */}
+        <section className="experienceItem">
+          <h3>AT&amp;T — Advanced Technical Support Specialist</h3>
+          <p className="date">2020 – Present</p>
+          <ul>
+            <li>
+              Performed root cause analysis on recurring issues and recommended
+              process improvements, reducing repeat problems for customers.
+            </li>
+            <li>
+              Assisted agents with escalated billing and technical cases,
+              applying clear communication and conflict resolution to reach
+              positive outcomes.
+            </li>
+            <li>
+              Delivered technical support across mobile devices, operating
+              systems, and network connectivity, reinforcing analytical and
+              troubleshooting skills.
+            </li>
+          </ul>
+        </section>
 
-        <main className="experienceMain">
-          <div className="experience-container">
-            <div className="experience-box">
-              <div className="company">AT&T Mobility LLC</div>
-              <div className="title">Premier Service Consultant</div>
-              <div className="experienceDescription">
-                <ul>
-                  <li>Root cause analysis to identify system vulnerabilities and process improvements.</li>
-                  <li>Provide technical support and guidance to agents, assisting with billing concerns and de-escalations.</li>
-                  <li>Utilize ticketing systems, such as Salesforce, to address and resolve mobile OS, hardware, and network issues.</li>
-                </ul>
-              </div>
-            </div>
+        {/* Technical Support Specialist */}
+        <section className="experienceItem">
+          <h3>AT&amp;T — Technical Support Specialist</h3>
+          <p className="date">2015 – 2020</p>
+          <ul>
+            <li>
+              Resolved 40–60 mobile hardware, OS, and connectivity issues
+              weekly, building expertise in systematic problem-solving.
+            </li>
+            <li>
+              Guided customers through complex billing inquiries and account
+              updates, translating technical details into user-friendly
+              explanations.
+            </li>
+            <li>
+              Collaborated with cross-functional teams to report system bugs and
+              provide feedback, strengthening teamwork and documentation skills.
+            </li>
+          </ul>
+        </section>
 
-            <div className="experience-box">
-              <div className="company">AT&T Mobility LLC</div>
-              <div className="title">Customer Support Specialist</div>
-              <div className="experienceDescription">
-                <ul>
-                  <li>Deliver exceptional technical support for Mobility Back Office, providing resolution to customer issues.</li>
-                  <li>Served as manager relief, guiding agents in handling irate customers, billing concerns, and technical problems.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="experience-box">
-              <div className="company">AT&T Mobility LLC</div>
-              <div className="title">Customer Service Representative</div>
-              <div className="experienceDescription">
-                <ul>
-                  <li>Received incoming calls from AT&T mobile customers, providing assistance with billing concerns, sales, and product/service inquiries.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </main>
+        {/* Customer Service Representative */}
+        <section className="experienceItem">
+          <h3>AT&amp;T — Customer Service Representative</h3>
+          <p className="date">2013 – 2015</p>
+          <ul>
+            <li>
+              Supported account setup, billing, and service inquiries as
+              first-line contact, ensuring a smooth customer experience.
+            </li>
+            <li>
+              De-escalated challenging situations with empathy and clarity,
+              developing strong interpersonal and communication skills.
+            </li>
+            <li>
+              Consistently achieved or exceeded key performance goals,
+              demonstrating reliability and accountability in a fast-paced
+              environment.
+            </li>
+          </ul>
+        </section>
       </div>
-    </div>
+    </main>
   );
 }
 

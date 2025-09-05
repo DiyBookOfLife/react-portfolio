@@ -1,6 +1,6 @@
 .contactPage {
-  font-family: 'Inter', sans-serif;
-  background-image: url("https://images.unsplash.com/photo-1497621122273-f5cfb6065c56?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  font-family: "Inter", sans-serif;
+  /* background-image: url("https://images.unsplash.com/photo-1497621122273-f5cfb6065c56?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,17 +26,21 @@
 .headerBox,
 .contentBox,
 .footerBox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(247, 243, 246);
-  background-color: rgb(139, 61, 129);
-  margin: 6px;
-  text-align: center;
-  height: 35px;
-  width: 100%;
+  display: inline-block;
+  text-decoration: none; /* removes underline */
+  color: #fff; /* text color */
+  background-color: #8b3d81; /* adjust each box’s color if needed */
+  padding: 10px 20px;
   border-radius: 5px;
-  padding: 0 10px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.headerBox:hover,
+.contentBox:hover,
+.footerBox:hover {
+  filter: brightness(1.1);
 }
 
 #quote {
@@ -44,7 +48,7 @@
   gap: 20px;
   align-items: center;
   justify-content: center;
-  font-family: 'Great Vibes', cursive;
+  font-family: "Great Vibes", cursive;
   font-size: 45px;
   color: azure;
   text-align: center;
