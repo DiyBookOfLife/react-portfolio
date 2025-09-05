@@ -11,11 +11,14 @@ function App() {
     <>
       <Header />
       <Routes>
+        <Route index element={<Home />} />
         <Route path="/" element={<Home />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/Education" element={<Education />} />
+        <Route path="/Experience" element={<Experience />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="*" element={<Home />} />
       </Routes>
+
       <Footer />
     </>
   );
