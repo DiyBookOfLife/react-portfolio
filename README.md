@@ -1,6 +1,7 @@
-# Toni Thomas – Front-End Developer Portfolio 🚀
+# Toni Thomas – Frontend Software Engineer Portfolio 🚀
 
-This is a professional portfolio built using **React** and **Vite**, designed to showcase my projects, technical skills, and growth as an early-career Front-End Software Engineer.
+This is a professional portfolio built using **React** and **Vite**, designed to showcase my projects, technical skills, and growth as an early-career **Frontend Software Engineer**.
+.
 
 ## 🔧 Tech Stack
 

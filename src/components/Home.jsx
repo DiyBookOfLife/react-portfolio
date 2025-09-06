@@ -41,7 +41,7 @@ function Home() {
   return (
     <main id="main" className="main-body">
       <div className="container">
-        <h2 className="main-title">Frontend Developer</h2>
+        <h2 className="main-title">Frontend Software Engineer</h2>
         <p className="hero-subline">
           React • JavaScript • APIs — I build fast, accessible web apps.
         </p>
@@ -63,16 +63,17 @@ function Home() {
         {/* About */}
         <section id="about" className="about-me">
           <p>
-            I’m a Front-End Web Developer with a solid foundation in HTML, CSS,
-            and JavaScript, supported by years of IT support experience. I focus
-            on building clean, accessible, and responsive applications that keep
-            users at the center.
+            I’m a Frontend Software Engineer with a strong foundation in HTML,
+            CSS, JavaScript, and React, backed by years of experience in IT
+            support. I specialize in building clean, accessible, and responsive
+            web applications that put users first.
           </p>
           <p>
-            Currently advancing my skills in React and modern frameworks, I
-            enjoy creating dynamic, interactive interfaces that solve real
-            problems. I’m eager to join a collaborative team where I can apply
-            my problem-solving abilities and deliver meaningful value.
+            Passionate about modern frameworks and best practices, I enjoy
+            creating dynamic, interactive interfaces that solve real-world
+            problems. I’m eager to bring my technical skills and problem-solving
+            mindset to a collaborative engineering team where I can deliver
+            meaningful impact and continue growing as a developer.
           </p>
         </section>
 
