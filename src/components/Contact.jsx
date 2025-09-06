@@ -1,11 +1,24 @@
-// Contact.jsx
+import { useState } from "react";
 import "./Contact.css";
 
 export default function Contact() {
+  const [copied, setCopied] = useState(false);
+
+  async function copyEmail() {
+    try {
+      await navigator.clipboard?.writeText?.("tsthomas205@gmail.com");
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch {
+      // last-resort fallback
+      window.location.href = "mailto:tsthomas205@gmail.com";
+    }
+  }
+
   return (
     <main className="contact-page">
-      <section className="contact-hero">
-        <h2>Let’s Connect</h2>
+      <section className="contact-hero" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Let’s Connect</h2>
         <p className="contact-intro">
           I’m open to Frontend/Software Engineer roles and collaboration. Reach
           out and I’ll get back within 24–48 hours.
@@ -18,6 +31,16 @@ export default function Contact() {
           >
             Email
           </a>
+
+          <button
+            type="button"
+            className="btn"
+            onClick={copyEmail}
+            aria-live="polite"
+          >
+            {copied ? "Copied!" : "Copy email"}
+          </button>
+
           <a
             className="btn"
             href="https://www.linkedin.com/in/tonithomas2025"
@@ -26,6 +49,7 @@ export default function Contact() {
           >
             LinkedIn
           </a>
+
           <a
             className="btn"
             href="https://github.com/DiyBookOfLife"
