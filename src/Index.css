@@ -9,6 +9,7 @@
 html,
 body {
   height: 100%;
+  margin: 0;
 }
 
 body {
@@ -53,4 +54,22 @@ textarea {
   z-index: 2000;
   text-decoration: none;
   outline: 2px solid #000;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; /* force React root to fill screen */
+}
+
+main {
+  flex: 1; /* allows main content to expand and push footer down */
+}
+
+footer {
+  margin-top: auto; /* sticks footer to bottom if content is short */
+  text-align: center;
+  padding: 12px 0;
+  background: #000;
+  color: #fff;
 }

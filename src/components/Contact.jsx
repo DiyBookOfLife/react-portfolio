@@ -1,47 +1,41 @@
-import React from "react";
+// Contact.jsx
 import "./Contact.css";
 
-function Contact() {
+export default function Contact() {
   return (
-    <main id="main" className="main-body">
-      <div className="contactContent">
-        <blockquote id="quote">
-          "I can do all things through <b>Christ</b> who strengthens me"
-          <cite>- Philippians 4:13</cite>
-        </blockquote>
+    <main className="contact-page">
+      <section className="contact-hero">
+        <h2>Let’s Connect</h2>
+        <p className="contact-intro">
+          I’m open to Frontend/Software Engineer roles and collaboration. Reach
+          out and I’ll get back within 24–48 hours.
+        </p>
 
-        <div className="contactContainer">
-          <a
-            href="mailto:tsthomas205@gmail.com"
-            aria-label="Send me an email"
-            className="headerBox"
-          >
+        <div className="contact-actions">
+          <a className="btn" href="mailto:your.email@example.com">
             Email
           </a>
-
           <a
-            href="https://www.linkedin.com/in/tonithomas2025/"
+            className="btn"
+            href="https://www.linkedin.com/in/your-handle"
             target="_blank"
             rel="noreferrer"
-            aria-label="Visit my LinkedIn profile"
-            className="contentBox"
           >
             LinkedIn
           </a>
-
           <a
+            className="btn"
             href="https://github.com/DiyBookOfLife"
             target="_blank"
             rel="noreferrer"
-            aria-label="View my GitHub projects"
-            className="footerBox"
           >
             GitHub
           </a>
         </div>
-      </div>
+
+        {/* OPTIONAL small quote (secondary, readable) */}
+        {/* <p className="contact-quote">“I can do all things through Christ who strengthens me.”</p> */}
+      </section>
     </main>
   );
 }
-
-export default Contact;
