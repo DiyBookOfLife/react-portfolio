@@ -12,14 +12,17 @@ export default function Contact() {
         </p>
 
         <div className="contact-actions">
-          <a className="btn" href="mailto:your.email@example.com">
+          <a
+            className="btn"
+            href="mailto:tsthomas205@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Toni,%0D%0A"
+          >
             Email
           </a>
           <a
             className="btn"
             href="https://www.linkedin.com/in/tonithomas2025"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             LinkedIn
           </a>
@@ -27,14 +30,11 @@ export default function Contact() {
             className="btn"
             href="https://github.com/DiyBookOfLife"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             GitHub
           </a>
         </div>
-
-        {/* OPTIONAL small quote (secondary, readable) */}
-        {/* <p className="contact-quote">“I can do all things through Christ who strengthens me.”</p> */}
       </section>
     </main>
   );
