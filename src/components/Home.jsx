@@ -54,13 +54,14 @@ function Home() {
           <a href="#skills" className="btn">
             Skills
           </a>
-          <Link to="/contact" className="btn btn-outline">
+          <Link to="/contact" className="btn">
             Contact
-          </Link>
+          </Link>{" "}
+          {/* changed from btn-outline */}
         </div>
 
         {/* About */}
-        <section className="about-me">
+        <section id="about" className="about-me">
           <p>
             I’m a Front-End Web Developer with a solid foundation in HTML, CSS,
             and JavaScript, supported by years of IT support experience. I focus

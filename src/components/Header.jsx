@@ -8,9 +8,9 @@ function Header() {
       <h1 className="name">Toni Thomas</h1>
       <nav aria-label="Primary">
         <div className="button-container">
-          <Link to="/">
-            <button className="button">About Me</button>
-          </Link>
+          <a href={`${import.meta.env.BASE_URL}#about`} className="button">
+            About Me
+          </a>
           <Link to="/education">
             <button className="button">Education</button>
           </Link>

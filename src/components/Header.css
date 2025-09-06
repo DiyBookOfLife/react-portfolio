@@ -38,15 +38,22 @@ h1.name {
 }
 
 header.mainmenu .button {
+  display: flex; /* makes centering reliable */
+  align-items: center; /* vertical centering */
+  justify-content: center; /* horizontal centering */
+
   color: #fff;
   background-color: rgb(139, 61, 129);
-  text-align: center;
   padding: 6px 14px;
   border-radius: 5px;
   font-size: 16px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   cursor: pointer;
+
+  min-height: 40px; /* consistent height */
+  white-space: nowrap; /* keeps "About Me" on one line */
 }
+
 header.mainmenu .button:hover {
   filter: brightness(1.1);
 }

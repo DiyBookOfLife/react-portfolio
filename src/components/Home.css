@@ -171,6 +171,13 @@
   height: auto;
 }
 
+/* Offset anchored sections so sticky header doesn't cover titles */
+#about,
+#projects,
+#skills {
+  scroll-margin-top: 90px;
+}
+
 /* Stack earlier on smaller screens (prevents x-scroll) */
 @media (max-width: 1200px) {
   .project-card {
