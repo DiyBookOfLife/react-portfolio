@@ -6,6 +6,7 @@ import html2 from "../assets/images/html2.avif";
 import html3 from "../assets/images/html3.avif";
 import "./Home.css";
 import FacePreview from "../assets/images/face-recognition.png";
+import { Link } from "react-router-dom";
 
 function Home() {
   useEffect(() => {
@@ -50,9 +51,9 @@ function Home() {
           <a href="#projects" className="btn">
             Projects
           </a>
-          <a href="/contact" className="btn btn-outline">
+          <Link to="/contact" className="btn btn-outline">
             Contact
-          </a>
+          </Link>
         </div>
 
         <section className="about-me">
