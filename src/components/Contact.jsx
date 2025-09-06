@@ -17,7 +17,7 @@ export default function Contact() {
           </a>
           <a
             className="btn"
-            href="https://www.linkedin.com/in/your-handle"
+            href="www.linkedin.com/in/tonithomas2025"
             target="_blank"
             rel="noreferrer"
           >
