@@ -1,12 +1,12 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import WJProject from "../assets/images/WJProject.png";
 import LPProject from "../assets/images/LPProject.png";
+import FacePreview from "../assets/images/face-recognition.png";
 import css1 from "../assets/images/css1.avif";
 import html2 from "../assets/images/html2.avif";
 import html3 from "../assets/images/html3.avif";
 import "./Home.css";
-import FacePreview from "../assets/images/face-recognition.png";
-import { Link } from "react-router-dom";
 
 function Home() {
   useEffect(() => {
@@ -16,6 +16,7 @@ function Home() {
       document
         .querySelector(".box-container")
         ?.scrollIntoView({ behavior: "smooth" });
+
       const cards = document.querySelectorAll(".flip-card");
       cards.forEach((card) => {
         const cardInner = card.querySelector(".flip-card-inner");
@@ -23,13 +24,10 @@ function Home() {
         if (card.dataset.topic === selectedTopic) {
           cardInner.classList.add("flipped");
         }
-        setTimeout(() => {
-          cardInner.classList.remove("flipped");
-        }, 3000);
+        setTimeout(() => cardInner.classList.remove("flipped"), 3000);
       });
     };
     dropdown?.addEventListener("change", handleChange);
-
     return () => dropdown?.removeEventListener("change", handleChange);
   }, []);
 
@@ -47,15 +45,21 @@ function Home() {
         <p className="hero-subline">
           React • JavaScript • APIs — I build fast, accessible web apps.
         </p>
+
+        {/* Hero CTAs */}
         <div className="hero-ctas">
           <a href="#projects" className="btn">
             Projects
+          </a>
+          <a href="#skills" className="btn">
+            Skills
           </a>
           <Link to="/contact" className="btn btn-outline">
             Contact
           </Link>
         </div>
 
+        {/* About */}
         <section className="about-me">
           <p>
             I’m a Front-End Web Developer with a solid foundation in HTML, CSS,
@@ -71,12 +75,12 @@ function Home() {
           </p>
         </section>
 
+        {/* Projects */}
         <section id="projects" className="projects-section">
           <h2 id="projects-title">Projects</h2>
           <div className="projects-container">
-            {/* === Face Recognition (Webcam) === */}
+            {/* Webcam Face Recognition */}
             <div className="project-card">
-              {/* TEXT LEFT */}
               <div className="project-text">
                 <h3>Webcam Face Recognition</h3>
                 <p className="project-desc">
@@ -84,8 +88,6 @@ function Home() {
                   overlays. Built for fast, in-browser inference using React +
                   TypeScript.
                 </p>
-
-                {/* TAGS */}
                 <div className="tags">
                   {[
                     "React",
@@ -104,8 +106,6 @@ function Home() {
                     </button>
                   ))}
                 </div>
-
-                {/* LINKS */}
                 <div className="actions">
                   <a
                     href="https://github.com/DiyBookOfLife/webcam-face-recognition"
@@ -123,8 +123,6 @@ function Home() {
                   </a>
                 </div>
               </div>
-
-              {/* IMAGE RIGHT — CLICKABLE */}
               <a
                 className="project-image-link"
                 href="https://webcam-face-recognition-wine.vercel.app/"
@@ -133,22 +131,19 @@ function Home() {
               >
                 <img
                   src={FacePreview}
-                  alt="Webcam Face Recognition app—live camera feed with face boxes drawn on the video."
+                  alt="Webcam Face Recognition app—live camera with face boxes."
                 />
               </a>
             </div>
 
-            {/* === Weather Journal App === */}
+            {/* Weather Journal App */}
             <div className="project-card">
-              {/* TEXT LEFT */}
               <div className="project-text">
                 <h3>Weather Journal App</h3>
                 <p className="project-desc">
                   Fetches weather data via OpenWeatherMap and dynamically
                   updates the UI with user input.
                 </p>
-
-                {/* TAGS */}
                 <div className="tags">
                   {["APIs & Fetching Data", "Express", "JavaScript"].map(
                     (t) => (
@@ -163,8 +158,6 @@ function Home() {
                     )
                   )}
                 </div>
-
-                {/* LINKS */}
                 <div className="actions">
                   <a
                     href="https://github.com/DiyBookOfLife/weather-journal-app"
@@ -182,32 +175,24 @@ function Home() {
                   </a>
                 </div>
               </div>
-
-              {/* IMAGE RIGHT — CLICKABLE */}
               <a
                 className="project-image-link"
                 href="https://diybookoflife.github.io/weather-journal-app/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img
-                  src={WJProject}
-                  alt="Weather Journal App—form inputs and results panel for city weather."
-                />
+                <img src={WJProject} alt="Weather Journal App UI." />
               </a>
             </div>
 
-            {/* === Landing Page === */}
+            {/* Landing Page */}
             <div className="project-card">
-              {/* TEXT LEFT */}
               <div className="project-text">
                 <h3>Landing Page</h3>
                 <p className="project-desc">
                   Responsive landing page built with semantic HTML and CSS
                   grid/flexbox for a polished first impression.
                 </p>
-
-                {/* TAGS */}
                 <div className="tags">
                   {["Responsive Web Design", "HTML5", "CSS3"].map((t) => (
                     <button
@@ -220,8 +205,6 @@ function Home() {
                     </button>
                   ))}
                 </div>
-
-                {/* LINKS */}
                 <div className="actions">
                   <a
                     href="https://github.com/DiyBookOfLife/landing-project"
@@ -239,67 +222,71 @@ function Home() {
                   </a>
                 </div>
               </div>
-
-              {/* IMAGE RIGHT — CLICKABLE */}
               <a
                 className="project-image-link"
                 href="https://diybookoflife.github.io/landing-project/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img
-                  src={LPProject}
-                  alt="Responsive landing page—hero section and navigation on a dark theme."
-                />
+                <img src={LPProject} alt="Landing page preview." />
               </a>
             </div>
           </div>
         </section>
 
-        <div className="box-container">
-          {[
-            {
-              topic: "JavaScript",
-              desc: "Skilled in DOM manipulation, event handling, asynchronous functions (async/await, Promises), and building dynamic user interfaces.",
-            },
-            {
-              topic: "Responsive Web Design",
-              desc: "Fluent in CSS Flexbox, Grid, and media queries to ensure seamless user experiences across all screen sizes.",
-            },
-            {
-              topic: "Version Control",
-              desc: "Experienced in branching, pull requests, commits, and collaboration workflows for clean project management in Git & Github.",
-            },
-            {
-              topic: "APIs & Fetching Data",
-              desc: "Confident working with REST APIs, handling fetch requests, parsing JSON, and updating the DOM dynamically.",
-            },
-            {
-              topic: "UI/UX Principles",
-              desc: "Focused on creating user-friendly layouts with attention to accessibility, visual hierarchy, and smooth interaction.",
-            },
-            {
-              topic: "Node.js & Express",
-              desc: "Able to build lightweight backend servers, set up routes, and connect front-end to server logic using Express.",
-            },
-            {
-              topic: "Sass & Bootstrap",
-              desc: "Experienced using Bootstrap’s utility classes and Sass for organized, modular, and scalable CSS. Strong focus on clean and responsive styling.",
-            },
-            {
-              topic: "React",
-              desc: "Comfortable using React to build component-based UIs, manage state, and create dynamic single-page applications with reusable logic.",
-            },
-          ].map((card) => (
-            <div key={card.topic} className="flip-card" data-topic={card.topic}>
-              <div className="flip-card-inner">
-                <div className="flip-card-front">{card.topic}</div>
-                <div className="flip-card-back">{card.desc}</div>
+        {/* Skills */}
+        <section id="skills" className="skills-section">
+          <h2>Skills</h2>
+          <div className="box-container">
+            {[
+              {
+                topic: "JavaScript",
+                desc: "DOM manipulation, event handling, async/await & Promises, dynamic UIs.",
+              },
+              {
+                topic: "Responsive Web Design",
+                desc: "Flexbox, Grid, media queries for seamless experiences.",
+              },
+              {
+                topic: "Version Control",
+                desc: "Branches, PRs, commits—clean collaboration with Git & GitHub.",
+              },
+              {
+                topic: "APIs & Fetching Data",
+                desc: "REST APIs, fetch/JSON, dynamic updates.",
+              },
+              {
+                topic: "UI/UX Principles",
+                desc: "Accessibility, visual hierarchy, smooth interaction.",
+              },
+              {
+                topic: "Node.js & Express",
+                desc: "Lightweight servers, routes, front-end ↔ server wiring.",
+              },
+              {
+                topic: "Sass & Bootstrap",
+                desc: "Utility classes, modular Sass, scalable styles.",
+              },
+              {
+                topic: "React",
+                desc: "Component UIs, state, reusable logic, SPAs.",
+              },
+            ].map((card) => (
+              <div
+                key={card.topic}
+                className="flip-card"
+                data-topic={card.topic}
+              >
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">{card.topic}</div>
+                  <div className="flip-card-back">{card.desc}</div>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </section>
 
+        {/* Decorative cards (unchanged) */}
         <div className="cards-container">
           {[css1, html2, html3].map((src, i) => (
             <div key={i} className="card">

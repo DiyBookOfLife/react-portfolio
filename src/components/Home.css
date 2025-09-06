@@ -189,6 +189,15 @@
 }
 
 /* ---------- SKILLS FLIP CARDS ---------- */
+
+.skills-section h2 {
+  margin-top: 50px; /* pushes it down from previous section */
+  margin-bottom: 24px;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem); /* same as Projects */
+  font-weight: 700;
+  text-align: center; /* match Projects heading style */
+}
+
 .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

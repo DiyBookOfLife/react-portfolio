@@ -16,13 +16,17 @@ header.mainmenu {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
+#projects,
+#skills {
+  scroll-margin-top: 90px;
+}
+
 /* ---------- LOGO / NAME ---------- */
 h1.name {
   font-family: "Great Vibes", cursive;
-  color: rgb(199, 88, 182);
   font-size: clamp(2rem, 8vw, 100px);
-  line-height: 1; /* prevents clipping */
-  margin: 0; /* no huge margins pushing it off */
+  line-height: 1; /* gives breathing room, avoids clipping */
+  margin: 10px 0 0 40px; /* pushes down + nudges right */
   white-space: nowrap;
 }
 
@@ -47,33 +51,37 @@ header.mainmenu .button:hover {
   filter: brightness(1.1);
 }
 
-/* ---------- TABLET ---------- */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   header.mainmenu {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
     gap: 10px;
   }
+
   h1.name {
     font-size: 50px;
+    margin: 0;
+    text-align: center;
   }
-  .button-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-  header.mainmenu .button {
-    width: 80%;
-    font-size: 18px;
-  }
-}
 
-/* ---------- PHONE ---------- */
-@media screen and (max-width: 480px) {
-  h1.name {
-    font-size: 40px;
-  }
-  header.mainmenu .button {
+  /* Make 4 equal columns across the header */
+  .button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal buttons */
+    gap: 8px;
     width: 100%;
-    font-size: 16px;
+  }
+
+  /* Equal width + equal height buttons */
+  header.mainmenu .button {
+    display: block;
+    width: 100%;
+    min-height: 40px; /* same height for all */
+    text-align: center;
+    font-size: 14px; /* smaller to keep one line */
+    padding: 8px 6px;
+    white-space: nowrap; /* prevent wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* safety if screen is super narrow */
   }
 }
