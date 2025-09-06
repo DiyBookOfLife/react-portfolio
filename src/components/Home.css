@@ -292,3 +292,18 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ---- HERO BUTTONS: MOBILE SIZE ---- */
+@media (max-width: 883px) {
+  .hero-ctas {
+    gap: 8px;
+  }
+
+  /* Be explicit so it wins over generic .btn rules */
+  .main-body .hero-ctas .btn {
+    font-size: 0.85rem !important;
+    padding: 4px 10px !important;
+    min-height: 32px !important;
+    border-radius: 6px;
+  }
+}
