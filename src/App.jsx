@@ -1,26 +1,27 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import Education from "./components/Education";
-import Experience from "./components/Experience";
-import Contact from "./components/Contact";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import Home from "./components/Home.jsx";
+import Education from "./components/Education.jsx";
+import Experience from "./components/Experience.tsx";
+import Contact from "./components/Contact.jsx";
 
 function App() {
   return (
-    <>
+    <BrowserRouter basename="/react-portfolio">
       <Header />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/Education" element={<Education />} />
-        <Route path="/Experience" element={<Experience />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
-
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 
