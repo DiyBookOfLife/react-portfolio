@@ -1,184 +1,242 @@
-h1.name {
-  font-family: "Great Vibes", cursive;
+/* ===== Experience page frame ===== */
+.experience-page .container {
+  width: min(1100px, 100%);
+  margin-inline: auto;
+  padding: clamp(16px, 3vw, 32px);
 }
 
-.mainBody {
-  font-family: "Inter", sans-serif;
-  background-color: rgba(
-    18,
-    18,
-    143,
-    0.979
-  ); /* Set background color with a blue shade and transparency */
-  background-image: url("https://images.unsplash.com/photo-1637682184683-74e6d34ed72d?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Set background image */
-  background-size: cover; /* Ensure the background image covers the entire body */
-  color: rgb(237, 243, 223); /* Set text color to a light cream shade */
-  font-size: 25px; /* Set font size for text */
-  text-align: center; /* Center align text horizontally */
-  display: flex; /* Use flexbox layout to position content */
-  flex-direction: column; /* Stack elements vertically (default is row) */
-  align-items: center; /* Center content horizontally */
-  justify-content: flex-start; /* Align content to the top of the viewport */
-  min-height: 100vh; /* Set body height to full viewport height */
-  width: 100%;
+.experience-page .page-title {
+  margin: 0 0 1.25rem;
 }
 
-/* Layout Grid */
-.experienceContainer {
+/* ===== Card list layout ===== */
+.experience-list {
   display: grid;
-  grid-template-columns: 1fr 3fr; /* Sidebar takes 1, main takes 3 */
-  grid-template-rows: 80px auto 50px; /* Header, content, footer */
-  grid-template-areas:
-    "hd hd "
-    "sd main "
-    "ft ft ";
-  height: 100vh;
-  gap: 10px;
+  grid-template-columns: 1fr;
+  gap: clamp(16px, 2vw, 24px);
 }
 
-/* Header */
-.experienceHeader {
+/* ===== Job card ===== */
+.experience-page {
+  --card-bg: #111;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-radius: 16px;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.job-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: clamp(16px, 2.2vw, 24px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.job-card:hover,
+.job-card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Header: title left, dates right (wraps on narrow screens) */
+.job-header {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-area: hd;
-  background: rgb(22, 21, 22);
-  color: white;
-  text-align: center;
-  padding: 20px;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
 }
 
-.name {
-  color: rgb(199, 88, 182);
-  font-family: "great vibes";
-  margin-right: 350px;
-  /* Add right margin for alignment */
-  margin-left: 60px;
-  /* Add left margin for alignment */
-  margin-bottom: 25px;
-  /* Add bottom margin */
-  font-size: 100px;
-  /* Set font size for the heading */
-}
-/* Sidebar */
-.experienceSidebar {
-  color: black;
-  grid-area: sd;
-  background: lightgray;
-  padding: 20px;
-  display: flex; /* Enables centering */
-  flex-direction: column; /* Align content in a column */
-  justify-content: center; /* Centers content vertically */
-  align-items: center; /* Centers content horizontally */
-  text-align: center; /* Centers text */
-}
-
-/* Main Content */
-.experienceMain {
-  grid-area: main;
-  padding: 20px;
-}
-
-/* Experience Grid */
-.experience-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* Three equal columns */
-  gap: 20px;
-  /* Spacing between boxes */
-  padding: 20px;
-}
-
-/* Experience Box */
-.experience-box {
-  background: rgba(240, 168, 234, 0.8);
-  /* Light purple */
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  /* Soft shadow */
-}
-
-/* Typography */
-.company {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.title {
-  font-style: italic;
-  color: #333;
-  margin: 5px 0;
-}
-
-.experienceDescription ul {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-}
-
-.experienceDescription li {
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-/* Footer */
-.experienceFooter {
-  font-size: medium;
-  grid-area: ft;
-  background: black;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  height: 10px;
-}
-
-.quotation {
-  font-size: 24px; /* Increase font size */
-  font-weight: bold; /* Make it more prominent */
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  max-width: 80%; /* Limits width for better readability */
-  margin: 0 auto; /* Centers horizontally */
-}
-
-body {
-  font-size: 16px;
+.job-title {
   margin: 0;
-  padding: 0;
+  font-size: clamp(1.05rem, 1.2vw + 0.9rem, 1.35rem);
+  line-height: 1.25;
 }
 
-@media (max-width: 900px) {
-  .experience-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.job-dates {
+  opacity: 0.8;
+  font-size: 0.95rem;
 }
 
-@media (max-width: 600px) {
-  .experience-container {
-    grid-template-columns: 1fr;
-  }
+/* Bullets spacing */
+.job-points {
+  margin: 8px 0 0;
+  padding-left: 1.1rem;
+}
+.job-points li {
+  margin: 0.35rem 0;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    padding: 1rem;
+@media (max-width: 480px) {
+  .job-card {
+    padding: 16px;
   }
-
-  h1 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .card {
+  .job-dates {
     width: 100%;
-    margin-bottom: 1rem;
+  }
+}
+
+/* ===== 1) Center the page & add breathing room ===== */
+.experience-container,
+.experienceBody,
+.experience-wrapper,
+main.experience,
+#experience {
+  width: min(1100px, 100%);
+  margin-inline: auto;
+  padding: clamp(16px, 3vw, 32px);
+}
+
+/* ===== 2) Card look built from existing headings & lists ===== */
+/* Card top: the job title <h3> when it is followed by a UL (optionally via a date <p>) */
+.experience-container h3:has(+ ul),
+.experience-container h3:has(+ p + ul),
+.experienceBody h3:has(+ ul),
+.experienceBody h3:has(+ p + ul) {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: none;
+  border-radius: 16px 16px 0 0;
+  padding: 16px 20px 8px;
+  margin-top: 16px;
+}
+
+/* Optional date line between the title and bullet list */
+.experience-container h3 + p:has(+ ul),
+.experienceBody h3 + p:has(+ ul) {
+  background: #111;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 0;
+  padding: 0 20px 8px;
+  opacity: 0.85; /* looks like a subtle 'dates' style */
+  font-size: 0.95rem;
+}
+
+/* Card bottom: the bullet list */
+.experience-container h3 + ul,
+.experienceContainer h3 + ul,
+.experienceBody h3 + ul,
+.experience-container h3 + p + ul,
+.experienceBody h3 + p + ul {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  padding: 10px 28px 16px;
+  margin-top: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover/focus elevation */
+.experience-container h3 + ul:hover,
+.experienceBody h3 + ul:hover,
+.experience-container h3 + p + ul:hover,
+.experienceBody h3 + p + ul:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Bullet spacing & typography inside cards */
+.experience-container h3,
+.experienceBody h3 {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.2vw + 0.9rem, 1.35rem);
+  line-height: 1.25;
+}
+.experience-container ul,
+.experienceBody ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+.experience-container li,
+.experienceBody li {
+  margin: 0.35rem 0;
+}
+
+/* Mobile niceties */
+@media (max-width: 480px) {
+  .experience-container,
+  .experienceBody {
+    padding: 16px;
+  }
+}
+
+/* ===== Page frame: center content & add breathing room ===== */
+.experiencePage .experienceContent {
+  width: min(1100px, 100%);
+  margin-inline: auto;
+  padding: clamp(16px, 3vw, 32px);
+}
+
+.experiencePage .experienceContent > h2 {
+  margin: 0 0 1.25rem;
+}
+
+/* ===== Card tokens (tweak these to match your project cards) ===== */
+.experienceItem {
+  --card-bg: #111;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-radius: 16px;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); /* swap to your project card shadow if needed */
+
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: clamp(16px, 2.2vw, 24px) clamp(18px, 3vw, 28px);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Elevation on hover/focus */
+.experienceItem:hover,
+.experienceItem:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Spacing between cards */
+.experienceItem + .experienceItem {
+  margin-top: clamp(16px, 2vw, 24px);
+}
+
+/* Title */
+.experienceItem h3 {
+  margin: 0 0 6px;
+  font-size: clamp(1.05rem, 1.2vw + 0.9rem, 1.35rem);
+  line-height: 1.25;
+}
+
+/* Date: top-right on desktop */
+.experienceItem .date {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+/* Bullets */
+.experienceItem ul {
+  margin: 8px 0 0;
+  padding-left: 1.1rem;
+}
+.experienceItem li {
+  margin: 0.35rem 0;
+}
+
+/* Mobile: let the date drop under the title */
+@media (max-width: 560px) {
+  .experienceItem .date {
+    position: static;
+    display: block;
+    margin: 2px 0 6px;
   }
 }

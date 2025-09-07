@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 import WJProject from "../assets/images/WJProject.png";
 import LPProject from "../assets/images/LPProject.png";
 import FacePreview from "../assets/images/face-recognition.png";
-import css1 from "../assets/images/css1.avif";
-import html2 from "../assets/images/html2.avif";
-import html3 from "../assets/images/html3.avif";
 import "./Home.css";
 
 function Home() {
@@ -287,15 +284,6 @@ function Home() {
             ))}
           </div>
         </section>
-
-        {/* Decorative cards (unchanged) */}
-        <div className="cards-container">
-          {[css1, html2, html3].map((src, i) => (
-            <div key={i} className="card">
-              <img src={src} alt="Card Image" className="card-image" />
-            </div>
-          ))}
-        </div>
       </div>
     </main>
   );

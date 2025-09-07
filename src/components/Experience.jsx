@@ -9,8 +9,8 @@ function Experience() {
 
         {/* Advanced Technical Support Specialist */}
         <section className="experienceItem">
-          <h3>AT&amp;T — Advanced Technical Support Specialist</h3>
-          <p className="date">2020 – Present</p>
+          <h3>AT&amp;T — Premier Service Consultant</h3>
+          <p className="date">2020 – 2025</p>
           <ul>
             <li>
               Performed root cause analysis on recurring issues and recommended
@@ -31,8 +31,8 @@ function Experience() {
 
         {/* Technical Support Specialist */}
         <section className="experienceItem">
-          <h3>AT&amp;T — Technical Support Specialist</h3>
-          <p className="date">2015 – 2020</p>
+          <h3>AT&amp;T — Advanced Technical Support Specialist</h3>
+          <p className="date">2016 – 2020</p>
           <ul>
             <li>
               Resolved 40–60 mobile hardware, OS, and connectivity issues
@@ -53,7 +53,7 @@ function Experience() {
         {/* Customer Service Representative */}
         <section className="experienceItem">
           <h3>AT&amp;T — Customer Service Representative</h3>
-          <p className="date">2013 – 2015</p>
+          <p className="date">2015 – 2016</p>
           <ul>
             <li>
               Supported account setup, billing, and service inquiries as
